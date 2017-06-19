@@ -29,6 +29,7 @@ view: funding {
     description: "Amount of funding"
     type: number
     sql: ${TABLE}.raised_amount ;;
+    value_format_name: decimal_2
   }
 
   dimension: raised_currency_code {
@@ -53,13 +54,13 @@ view: funding {
     type:  average
     description: "Average funding amount"
     sql: ${raised_amount} ;;
-    value_format_name: usd
+    value_format_name: decimal_2
   }
 
   measure: sum_funding {
     description: "Total funding"
     type: sum
     sql: ${raised_amount} ;;
-    value_format_name: usd
+    value_format_name: decimal_2
   }
 }

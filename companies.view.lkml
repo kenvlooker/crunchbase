@@ -107,5 +107,6 @@ view: companies {
     type:  average
     description: "Average # of employees"
     sql: ${number_of_employees} ;;
+    value_format_name: decimal_0
   }
 }

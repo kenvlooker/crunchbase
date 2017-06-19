@@ -13,10 +13,11 @@ view: acquisitions {
   }
 
   dimension: price_amount {
-   description: "Purchase price"
-   type: number
-   sql: ${TABLE}.price_amount ;;
- }
+    description: "Purchase price"
+    type: number
+    sql: ${TABLE}.price_amount ;;
+   value_format_name: decimal_2
+  }
 
   dimension: currency {
     description: "Currency code"
@@ -25,11 +26,11 @@ view: acquisitions {
   }
 
   dimension_group: acquired_at {
-   description: "Date acquisition occurred"
-   type: time
-   timeframes: [date, week, month, year]
-   sql: ${TABLE}.acquired_at ;;
- }
+    description: "Date acquisition occurred"
+    type: time
+    timeframes: [date, week, month, year]
+    sql: ${TABLE}.acquired_at ;;
+  }
 
   measure: count {
     description: "Use this for counting dimensions"

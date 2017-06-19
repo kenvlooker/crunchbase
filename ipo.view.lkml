@@ -16,6 +16,7 @@ view: ipo {
     description: "Company valuation at time of IPO"
     type: number
     sql: ${TABLE}.valuation_amount ;;
+    value_format_name: usd
   }
 
   dimension_group: public_date {
