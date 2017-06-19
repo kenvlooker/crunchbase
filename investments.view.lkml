@@ -2,6 +2,7 @@ view: investments {
 
   dimension: id {
     primary_key: yes
+    hidden: yes
     description: "Unique ID for each investment record"
     type: number
     sql: ${TABLE}.id ;;
@@ -26,7 +27,8 @@ view: investments {
     }
 
   dimension: company_yesno {
-    label: "Is this investor a company?"
+    label: "Is Company"
+    description: "Is this investor a company?"
     type: yesno
     sql:  ${is_company} = 1 ;;
   }

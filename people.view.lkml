@@ -10,7 +10,7 @@ view: people {
   dimension: name {
     description: "Name"
     type: string
-    sql: CONCAT(${TABLE}first_name, ${TABLE}.last_name) ;;
+    sql: CONCAT(${TABLE}.first_name,' ',${TABLE}.last_name) ;;
   }
 
 #  dimension: last_name {

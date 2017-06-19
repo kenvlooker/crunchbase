@@ -2,6 +2,7 @@ view: offices {
 
   dimension: id {
     primary_key: yes
+    hidden: yes
     description: "Unique ID for office"
     type: number
     sql: ${TABLE}.id ;;

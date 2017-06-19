@@ -2,6 +2,7 @@ view: funding {
 
   dimension: id {
     primary_key: yes
+    hidden:  yes
     description: "Unique ID for each funding record"
     type: number
     sql: ${TABLE}.id ;;

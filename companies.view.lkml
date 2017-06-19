@@ -82,12 +82,14 @@ view: companies {
   }
 
   dimension: created_at {
+    label: "Record created at"
     description: "Date and time company record created"
     type: date
     sql: ${TABLE}.permalink ;;
   }
 
   dimension: updated_at {
+    label: "Record last updated"
     description: "Date an time company record was last updated"
     type: date
     sql: ${TABLE}.updated_at ;;

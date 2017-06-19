@@ -2,7 +2,7 @@ view: employment {
 
   dimension: id {
     primary_key: yes
-    description: "Unique ID for each employment record"
+    hidden: yes
     type: number
     sql: ${TABLE}.id ;;
   }
