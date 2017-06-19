@@ -8,13 +8,13 @@ view: funding {
   }
 
   dimension: permalink {
-    hidden: yes
+    view_label: "Company"
     type: string
     sql: ${TABLE}.permalink ;;
   }
 
   dimension: round_code {
-    hidden: yes
+    description: "Funding round"
     type: string
     sql: ${TABLE}.round_code ;;
   }

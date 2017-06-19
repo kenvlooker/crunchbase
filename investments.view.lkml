@@ -8,7 +8,7 @@ view: investments {
   }
 
   dimension: investor_permalink {
-    hidden: yes
+    view_label: "Investor name"
     type: string
     sql: ${TABLE}.investor_permalink ;;
   }

@@ -1,13 +1,13 @@
 view: acquisitions {
 
   dimension: acquired_permalink {
-    hidden: yes
+    view_label: "Acquired"
     type: string
     sql: ${TABLE}.acquired_permalink ;;
   }
 
   dimension: acquired_by_permalink {
-    hidden: yes
+    view_label: "Acquired by"
     type: string
     sql: ${TABLE}.acquired_by_permalink ;;
   }

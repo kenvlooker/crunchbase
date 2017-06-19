@@ -69,7 +69,7 @@ view: companies {
   }
 
   dimension: description {
-    description: " "
+    description: "Company description "
     type: string
     sql: ${TABLE}.description ;;
   }
@@ -86,17 +86,11 @@ view: companies {
     sql: ${TABLE}.updated_at ;;
   }
 
-  dimension: overview {
-    description: " "
-    type: string
-    sql: ${TABLE}.overview ;;
-  }
-
-  dimension: full_record {
-    description: " "
-    type: number
-    sql: ${TABLE}.full_record ;;
-  }
+#  dimension: full_record {
+#    description: " "
+#    type: number
+#    sql: ${TABLE}.full_record ;;
+#  }
   measure: count {
    description: "Use this for counting dimensions"
    type: count
