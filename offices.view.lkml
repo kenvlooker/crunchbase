@@ -1,0 +1,39 @@
+view: offices {
+
+  dimension: id {
+    primary_key: yes
+    description: "Unique ID for office"
+    type: number
+    sql: ${TABLE}.id ;;
+  }
+
+  dimension: country_code {
+    description: "Country"
+    type: string
+    sql: ${TABLE}.country_code ;;
+  }
+
+  dimension: state_code {
+    description: "State"
+    type: string
+    sql: ${TABLE}.state_code ;;
+  }
+
+  dimension: city {
+    description: "City"
+    type: string
+    sql: ${TABLE}.city ;;
+  }
+
+  dimension: company_permalink {
+    hidden: yes
+    type: string
+    sql: ${TABLE}.company_permalink ;;
+  }
+
+  measure: count {
+    description: "Use this for counting dimensions"
+    type: count
+    # drill_fields: []
+  }
+}
