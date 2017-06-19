@@ -49,6 +49,13 @@ view: companies {
     sql: ${TABLE}.number_of_employees ;;
   }
 
+  dimension: number_employees_tier {
+    type:  tier
+    tiers: [ 50, 500, 1000]
+    style: classic
+    sql:  ${number_of_employees} ;;
+  }
+
   dimension_group: founded_at {
     description: "Date company was founded"
     type: time
