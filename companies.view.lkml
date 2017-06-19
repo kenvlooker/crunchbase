@@ -51,7 +51,7 @@ view: companies {
 
   dimension: number_employees_tier {
     type:  tier
-    tiers: [ 50, 500, 1000]
+    tiers: [ 50, 500, 5000, 50000]
     style: classic
     sql:  ${number_of_employees} ;;
   }
