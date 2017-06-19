@@ -7,17 +7,17 @@ view: people {
     sql: ${TABLE}.permalink ;;
   }
 
-  dimension: first_name {
-    description: "First name"
+  dimension: name {
+    description: "Name"
     type: string
-    sql: ${TABLE}.first_name ;;
+    sql: CONCAT('${TABLE}.first_name', '${TABLE}.last_name') ;;
   }
 
-  dimension: last_name {
-    description: "Last name"
-    type: string
-    sql: ${TABLE}.last_name ;;
-  }
+#  dimension: last_name {
+#    description: "Last name"
+#    type: string
+#    sql: ${TABLE}.last_name ;;
+#  }
 
   measure: count {
     description: "Use this for counting dimensions"
