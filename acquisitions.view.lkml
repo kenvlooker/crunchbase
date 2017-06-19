@@ -1,13 +1,13 @@
 view: acquisitions {
 
   dimension: acquired_permalink {
-    view_label: "Acquired"
+    label: "Acquired"
     type: string
     sql: ${TABLE}.acquired_permalink ;;
   }
 
   dimension: acquired_by_permalink {
-    view_label: "Acquired by"
+    label: "Acquired by"
     type: string
     sql: ${TABLE}.acquired_by_permalink ;;
   }
@@ -31,8 +31,16 @@ view: acquisitions {
    sql: ${TABLE}.acquired_at ;;
  }
 
- measure: count {
-   description: "Use this for counting dimensions"
-   type: count
- }
+  measure: count {
+    description: "Use this for counting dimensions"
+    type: count
+  }
+
+  measure: sum_acquisitions {
+    description: "Total price of acquisitions"
+    type: sum
+    sql: ${price_amount} ;;
+    value_format_name: usd
+  }
+
 }

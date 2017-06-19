@@ -8,7 +8,7 @@ view: investments {
   }
 
   dimension: investor_permalink {
-    view_label: "Investor name"
+    label: "Investor name"
     type: string
     sql: ${TABLE}.investor_permalink ;;
   }
@@ -24,6 +24,12 @@ view: investments {
     type: number
     sql: ${TABLE}.is_company ;;
     }
+
+  dimension: company_yesno {
+    label: "Is this investor a company?"
+    type: yesno
+    sql:  ${is_company} = 1 ;;
+  }
 
   measure: count {
     description: "Use this for counting dimensions"

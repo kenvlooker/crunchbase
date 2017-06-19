@@ -8,12 +8,12 @@ view: employment {
   }
 
   dimension: permalink {
-    view_label: "Employee name"
+    label: "Employee name"
     type: string
     sql: ${TABLE}.permalink ;;
   }
   dimension: company_permalink {
-    view_label: "Company name"
+    label: "Company name"
     type: string
     sql: ${TABLE}.company_permalink ;;
   }

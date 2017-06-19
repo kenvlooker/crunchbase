@@ -1,13 +1,13 @@
 view: competitions {
 
   dimension: permalink {
-    view_label: "Company"
+    label: "Company"
     type: string
     sql: ${TABLE}.permalink ;;
   }
 
   dimension: competitor_permalink {
-    view_label: "Competitor"
+    label: "Competitor"
     type: string
     sql: ${TABLE}.competitor_permalink ;;
   }
