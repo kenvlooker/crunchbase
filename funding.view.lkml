@@ -49,4 +49,17 @@ view: funding {
     type: count
     # drill_fields: []
   }
+  measure: average_funding {
+    type:  average
+    description: "Average funding amount"
+    sql: ${raised_amount} ;;
+    value_format_name: usd
+  }
+
+  measure: sum_funding {
+    description: "Total funding"
+    type: sum
+    sql: ${raised_amount} ;;
+    value_format_name: usd
+  }
 }

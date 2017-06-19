@@ -30,4 +30,18 @@ view: ipo {
     type: count
     # drill_fields: []
   }
+
+  measure: sum_ipos {
+    description: "Total valuation amount"
+    type: sum
+    sql: ${valuation_amount} ;;
+    value_format_name: usd
+  }
+
+  measure: average_ipos {
+    description: "Average valuation amount"
+    type: average
+    sql: ${valuation_amount} ;;
+    value_format_name: usd
+  }
 }
