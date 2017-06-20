@@ -1,6 +1,7 @@
 view: ipo {
 
   dimension: company_permalink {
+    primary_key: yes
     hidden: yes
     type: string
     sql: ${TABLE}.company_permalink ;;

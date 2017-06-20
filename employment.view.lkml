@@ -8,20 +8,28 @@ view: employment {
   }
 
   dimension: permalink {
-    label: "Employee name"
+    hidden: yes
     type: string
     sql: ${TABLE}.permalink ;;
   }
   dimension: company_permalink {
-    label: "Company name"
+    hidden: yes
     type: string
     sql: ${TABLE}.company_permalink ;;
   }
   dimension: is_past {
-    description: "Is this job in the past?"
+    hidden: yes
     type: number
     sql: ${TABLE}.is_past ;;
     }
+
+  dimension: past_yesno {
+    label: "Is this job in the past?"
+    description: "Is this investor a company?"
+    type: yesno
+    sql:  ${is_past} = 1 ;;
+  }
+
   dimension: title {
     description: "Job title"
     type: string

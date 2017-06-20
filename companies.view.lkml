@@ -38,7 +38,6 @@ view: companies {
   }
 
   dimension: category_code {
-    description: " "
     type: string
     sql: ${TABLE}.category_code ;;
   }
@@ -76,7 +75,7 @@ view: companies {
   }
 
   dimension: description {
-    description: "Company description "
+    description: "Company description"
     type: string
     sql: ${TABLE}.description ;;
   }

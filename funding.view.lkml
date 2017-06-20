@@ -9,7 +9,7 @@ view: funding {
   }
 
   dimension: permalink {
-    label: "Company"
+    hidden: yes
     type: string
     sql: ${TABLE}.permalink ;;
   }
