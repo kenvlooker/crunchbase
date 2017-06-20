@@ -44,4 +44,11 @@ view: acquisitions {
     value_format_name: usd
   }
 
+  measure: average_acquisitions {
+    description: "Average price of acquisitions"
+    type: average
+    sql: ${price_amount} ;;
+    value_format_name: usd
+  }
+
 }

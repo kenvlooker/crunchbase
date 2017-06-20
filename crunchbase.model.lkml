@@ -43,7 +43,7 @@ explore: companies {
  join: acquired_by {
    type: left_outer
    from:  acquisitions
-   relationship: many_to_one
+   relationship: one_to_one
    sql_on: ${acquired_by.acquired_by_permalink} = ${companies.permalink} ;;
  }
 
