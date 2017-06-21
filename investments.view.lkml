@@ -27,15 +27,10 @@ view: investments {
     }
 
   dimension: company_yesno {
-    label: "Is Company"
-    description: "Is this investor a company?"
+#    label: "Is Company"
+    hidden: yes
+#    description: "Is this investor a company?"
     type: yesno
     sql:  ${is_company} = 1 ;;
-  }
-
-  measure: investments_count {
-    description: "Number of investments"
-    type: count
-    # drill_fields: []
   }
 }
