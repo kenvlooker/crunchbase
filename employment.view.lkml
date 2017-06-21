@@ -35,8 +35,8 @@ view: employment {
     type: string
     sql: ${TABLE}.title ;;
   }
-  measure: count {
-    description: "Use this for counting dimensions"
+  measure: employment_count {
+    description: "Number of employments"
     type: count
     # drill_fields: []
   }

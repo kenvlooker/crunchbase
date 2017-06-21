@@ -19,8 +19,8 @@ view: people {
 #    sql: ${TABLE}.last_name ;;
 #  }
 
-  measure: count {
-    description: "Use this for counting dimensions"
+  measure: people_count {
+    description: "Number of people"
     type: count
     # drill_fields: []
   }

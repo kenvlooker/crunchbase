@@ -27,12 +27,11 @@ view: ipo {
     sql: ${TABLE}.public_date ;;
   }
 
-  measure: count {
-    description: "Use this for counting dimensions"
+  measure: ipo_count {
+    description: "Number of ipos"
     type: count
     # drill_fields: []
   }
-
   measure: sum_ipos {
     description: "Total valuation amount"
     type: sum

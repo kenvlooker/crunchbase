@@ -32,8 +32,8 @@ view: offices {
     sql: ${TABLE}.company_permalink ;;
   }
 
-  measure: count {
-    description: "Use this for counting dimensions"
+  measure: office_count {
+    description: "Number of offices"
     type: count
     # drill_fields: []
   }

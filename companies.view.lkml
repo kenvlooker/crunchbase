@@ -99,8 +99,8 @@ view: companies {
 #    type: number
 #    sql: ${TABLE}.full_record ;;
 #  }
-  measure: count {
-   description: "Use this for counting dimensions"
+  measure: companies_count {
+   description: "Number of companies"
    type: count
    # drill_fields: []
  }

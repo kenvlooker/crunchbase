@@ -46,8 +46,8 @@ view: funding {
     sql: ${TABLE}.funded_at ;;
   }
 
-  measure: count {
-    description: "Use this for counting dimensions"
+  measure: funding_count {
+    description: "Number of fundings"
     type: count
     # drill_fields: []
   }

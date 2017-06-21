@@ -12,8 +12,8 @@ view: competitions {
     sql: ${TABLE}.competitor_permalink ;;
   }
 
-  measure: count {
-    description: "Use this for counting dimensions"
+  measure: competitors_count {
+    description: "Number of competitors"
     type: count
     # drill_fields: []
   }

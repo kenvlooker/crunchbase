@@ -32,8 +32,8 @@ view: acquisitions {
     sql: ${TABLE}.acquired_at ;;
   }
 
-  measure: count {
-    description: "Use this for counting dimensions"
+  measure: acquisitions_count {
+    description: "Number of acquisitions"
     type: count
   }
 

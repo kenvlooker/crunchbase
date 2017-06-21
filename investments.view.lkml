@@ -33,8 +33,8 @@ view: investments {
     sql:  ${is_company} = 1 ;;
   }
 
-  measure: count {
-    description: "Use this for counting dimensions"
+  measure: investments_count {
+    description: "Number of investments"
     type: count
     # drill_fields: []
   }

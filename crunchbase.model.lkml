@@ -108,7 +108,7 @@ explore: employment {
   join: people {
     type: left_outer
     relationship: many_to_one
-    sql_on: ${employment.company_permalink} = ${people.permalink} ;;
+    sql_on: ${employment.permalink} = ${people.permalink} ;;
   }
 
   join: companies {
