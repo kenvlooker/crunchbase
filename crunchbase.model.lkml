@@ -9,7 +9,7 @@ label: "VC Funded Companies"
 # # and define the joins that connect them together.
 #
 explore: companies {
-  label: "All company data"
+  label: "All Company Data"
  join: funding {
    type: left_outer
    relationship: many_to_one
@@ -61,10 +61,18 @@ explore: companies {
     sql_on: ${employment.company_permalink} = ${companies.permalink} ;;
   }
 
-  join: people {
+  join: employed_people {
+    from: people
     type: left_outer
     relationship: many_to_many
-    sql_on: ${employment.permalink} = ${people.permalink} ;;
+    sql_on: ${employment.permalink} = ${employed_people.permalink} ;;
+  }
+
+  join: investing_people {
+    from: people
+    type: left_outer
+    relationship: many_to_many
+    sql_on: ${employment.permalink} = ${investing_people.permalink} ;;
   }
 
 }
