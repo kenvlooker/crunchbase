@@ -72,7 +72,7 @@ explore: companies {
     from: people
     type: left_outer
     relationship: many_to_many
-    sql_on: ${employment.permalink} = ${investing_people.permalink} ;;
+    sql_on: ${investments.investor_permalink} = ${investing_people.permalink} ;;
   }
 
 }
