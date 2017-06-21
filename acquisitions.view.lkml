@@ -35,12 +35,12 @@ view: acquisitions {
     description: "Purchase price"
     type: number
     sql: ${TABLE}.price_amount ;;
-   value_format_name: decimal_2
+    value_format_name: decimal_2
   }
 
   dimension: currency {
     description: "Currency code"
-    type: number
+    type: string
     sql: ${TABLE}.currency ;;
   }
 
