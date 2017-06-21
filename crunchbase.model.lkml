@@ -57,10 +57,10 @@ explore: companies {
   }
 
   join: acquisitions {
-    view_label: "Acquiring Company"
+    view_label: "Acquiring Companies"
     type: left_outer
-    relationship: many_to_one
-    sql_on: ${companies.permalink} = ${acquisitions.acquired_by_permalink}  ;;
+    relationship: one_to_many
+    sql_on: ${companies.permalink} = ${acquisitions.acquired_permalink}  ;;
  }
 
   join: employment {

@@ -1,7 +1,7 @@
 view: acquisitions {
 
   dimension: acquired_permalink {
-    label: "Acquired"
+    hidden: yes
     type: string
     sql: ${TABLE}.acquired_permalink ;;
   }
