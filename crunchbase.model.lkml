@@ -80,31 +80,31 @@ explore: companies {
 
 explore: funding {
   label: "Funding and Investments"
-  join: funded_companies {
-    from: companies
+
+  join: companies {
     type: left_outer
     relationship: many_to_one
-    sql_on: ${funding.permalink} = ${funded_companies.permalink} ;;
+    sql_on: ${funding.permalink} = ${companies.permalink} ;;
   }
 
   join: investments {
     type: left_outer
-    relationship: many_to_many
+    relationship: one_to_many
     sql_on: ${funding.id} = ${investments.funding_id} ;;
   }
 
-  join: people {
-    view_label: "Investing people"
+  join: investing_people {
+    from: people
     type: left_outer
-    relationship: many_to_many
-    sql_on: ${people.permalink} = ${investments.investor_permalink} ;;
+    relationship: one_to_one
+    sql_on: ${investments.investor_permalink} = ${investing_people.permalink} AND ${investments.is_company} = 0  ;;
   }
 
   join: investing_companies {
     from: companies
     type: left_outer
-    relationship: many_to_many
-    sql_on: ${investing_companies.permalink} = ${investments.investor_permalink} ;;
+    relationship: one_to_one
+    sql_on: ${investments.investor_permalink} = ${investing_companies.permalink} AND ${investments.is_company} = 1  ;;
   }
 
 }
