@@ -1,10 +1,10 @@
 view: companies {
 
  dimension: permalink {
-  primary_key: yes
-  description: "Unique ID for each company"
-   type: string
-   sql: ${TABLE}.permalink ;;
+    primary_key: yes
+    hidden: yes
+    type: string
+    sql: ${TABLE}.permalink ;;
  }
 
   dimension: name {

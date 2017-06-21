@@ -1,5 +1,24 @@
 view: acquisitions {
 
+  measure: acquisitions_count {
+    description: "Number of acquisitions"
+    type: count
+  }
+
+  measure: sum_acquisitions {
+    description: "Total price of acquisitions"
+    type: sum
+    sql: ${price_amount} ;;
+    value_format_name: usd
+  }
+
+  measure: average_acquisitions {
+    description: "Average price of acquisitions"
+    type: average
+    sql: ${price_amount} ;;
+    value_format_name: usd
+  }
+
   dimension: acquired_permalink {
     hidden: yes
     type: string
@@ -30,25 +49,6 @@ view: acquisitions {
     type: time
     timeframes: [date, week, month, year]
     sql: ${TABLE}.acquired_at ;;
-  }
-
-  measure: acquisitions_count {
-    description: "Number of acquisitions"
-    type: count
-  }
-
-  measure: sum_acquisitions {
-    description: "Total price of acquisitions"
-    type: sum
-    sql: ${price_amount} ;;
-    value_format_name: usd
-  }
-
-  measure: average_acquisitions {
-    description: "Average price of acquisitions"
-    type: average
-    sql: ${price_amount} ;;
-    value_format_name: usd
   }
 
 }
