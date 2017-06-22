@@ -20,6 +20,7 @@ view: acquisitions {
   }
 
   dimension: acquired_permalink {
+    primary_key: yes
     hidden: yes
     type: string
     sql: ${TABLE}.acquired_permalink ;;

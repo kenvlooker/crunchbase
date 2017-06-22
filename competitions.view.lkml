@@ -1,6 +1,7 @@
 view: competitions {
 
   dimension: permalink {
+    primary_key: yes
     hidden: yes
     type: string
     sql: ${TABLE}.permalink ;;
