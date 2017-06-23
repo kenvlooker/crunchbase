@@ -56,12 +56,21 @@ explore: companies {
     sql_on: ${companies.permalink} = ${competitions.permalink}  ;;
   }
 
-  join: acquisitions {
+  join: acquired {
+    from: "acquisitions"
+    view_label: "Acquired Companies"
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${companies.permalink} = ${acquired.acquired_permalink}  ;;
+  }
+
+  join: acquiring_company{
+    from: "acquisitions"
     view_label: "Acquiring Companies"
     type: left_outer
     relationship: one_to_many
-    sql_on: ${companies.permalink} = ${acquisitions.acquired_permalink}  ;;
- }
+    sql_on: ${companies.permalink} = ${acquiring_company.acquired_by_permalink}  ;;
+  }
 
   join: employment {
     type: left_outer
