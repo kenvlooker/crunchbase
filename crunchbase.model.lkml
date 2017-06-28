@@ -18,6 +18,7 @@ explore: companies {
   }
 
   join: ipo {
+    view_label: "Companies"
     type: left_outer
     relationship: one_to_one
     sql_on: ${companies.permalink} = ${ipo.company_permalink} ;;

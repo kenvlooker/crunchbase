@@ -10,7 +10,7 @@ view: competitions {
   }
 
   dimension: competitor_permalink {
-    label: "Competitor"
+    hidden: yes
     type: string
     sql: ${TABLE}.competitor_permalink ;;
   }
