@@ -80,17 +80,17 @@ view: companies {
     sql: ${TABLE}.description ;;
   }
 
-  dimension: created_at {
-    label: "Record created at"
+  dimension_group: record_created_at {
     description: "Date and time company record created"
-    type: date
-    sql: ${TABLE}.permalink ;;
+    type: time
+    timeframes: [date, week, month, year]
+    sql: ${TABLE}.created_at ;;
   }
 
-  dimension: updated_at {
-    label: "Record last updated"
+  dimension_group: record_updated_at {
     description: "Date an time company record was last updated"
-    type: date
+    type: time
+    timeframes: [date, week, month, year]
     sql: ${TABLE}.updated_at ;;
   }
 
@@ -110,4 +110,5 @@ view: companies {
     sql: ${number_of_employees} ;;
     value_format_name: decimal_0
   }
+
 }

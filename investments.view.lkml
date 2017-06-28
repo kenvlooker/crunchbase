@@ -26,10 +26,9 @@ view: investments {
     sql: ${TABLE}.is_company ;;
     }
 
-  dimension: company_yesno {
-#    label: "Is Company"
+  dimension: is_this_a_company {
     hidden: yes
-#    description: "Is this investor a company?"
+    description: "Is this investor a company?"
     type: yesno
     sql:  ${is_company} = 1 ;;
   }

@@ -1,4 +1,6 @@
 view: competitions {
+#  sql_table_name: competitions ;;
+
 
   dimension: permalink {
     primary_key: yes

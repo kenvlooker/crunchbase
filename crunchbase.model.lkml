@@ -56,12 +56,28 @@ explore: companies {
     sql_on: ${companies.permalink} = ${competitions.competitor_permalink}  ;;
   }
 
+  join: competing_company_info{
+    from: companies
+    view_label: "Acquired Companies"
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${competitions.competitor_permalink} =  ${competing_company_info.permalink};;
+  }
+
   join: acquired {
     from: "acquisitions"
     view_label: "Acquired Companies"
     type: left_outer
     relationship: one_to_one
     sql_on: ${companies.permalink} = ${acquired.acquired_by_permalink}  ;;
+  }
+
+  join: acquired_company_info{
+    from: companies
+    view_label: "Acquired Companies"
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${acquired.acquired_permalink} =  ${acquired_company_info.permalink};;
   }
 
   join: acquiring_company{
@@ -72,7 +88,15 @@ explore: companies {
     sql_on: ${companies.permalink} = ${acquiring_company.acquired_permalink}  ;;
   }
 
-  join: employment {
+  join: acquiring_company_info{
+    from: companies
+    view_label: "Parent Companies"
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${acquired.acquired_by_permalink} =  ${acquiring_company_info.permalink};;
+  }
+    join: employment {
+    view_label: "Employees"
     type: left_outer
     relationship: one_to_many
     sql_on: ${companies.permalink} = ${employment.company_permalink} ;;
@@ -80,6 +104,7 @@ explore: companies {
 
   join: employed_people {
     from: people
+    view_label: "Employees"
     type: left_outer
     relationship: many_to_one
     sql_on: ${employment.permalink} = ${employed_people.permalink} ;;

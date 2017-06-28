@@ -23,8 +23,7 @@ view: employment {
     sql: ${TABLE}.is_past ;;
     }
 
-  dimension: past_yesno {
-    label: "Is this job in the past?"
+  dimension: is_this_job_in_the_past {
     description: "Is this investor a company?"
     type: yesno
     sql:  ${is_past} = 1 ;;
