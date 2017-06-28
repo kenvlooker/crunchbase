@@ -53,7 +53,7 @@ explore: companies {
     view_label: "Competitors"
     type: left_outer
     relationship: one_to_many
-    sql_on: ${companies.permalink} = ${competitions.permalink}  ;;
+    sql_on: ${companies.permalink} = ${competitions.competitor_permalink}  ;;
   }
 
   join: acquired {
@@ -61,15 +61,15 @@ explore: companies {
     view_label: "Acquired Companies"
     type: left_outer
     relationship: one_to_one
-    sql_on: ${companies.permalink} = ${acquired.acquired_permalink}  ;;
+    sql_on: ${companies.permalink} = ${acquired.acquired_by_permalink}  ;;
   }
 
   join: acquiring_company{
     from: "acquisitions"
-    view_label: "Acquiring Companies"
+    view_label: "Parent Companies"
     type: left_outer
     relationship: one_to_many
-    sql_on: ${companies.permalink} = ${acquiring_company.acquired_by_permalink}  ;;
+    sql_on: ${companies.permalink} = ${acquiring_company.acquired_permalink}  ;;
   }
 
   join: employment {
