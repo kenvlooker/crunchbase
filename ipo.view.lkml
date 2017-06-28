@@ -13,14 +13,14 @@ view: ipo {
     sql: ${TABLE}.stock_symbol ;;
   }
 
-  dimension: valuation_amount {
+  dimension: IPO_valuation_amount {
     description: "Company valuation at time of IPO"
     type: number
     sql: ${TABLE}.valuation_amount ;;
     value_format_name: usd
   }
 
-  dimension_group: public_date {
+  dimension_group: IPO_date {
     description: "Date of IPO"
     type: time
     timeframes: [date, week, month, year]
@@ -35,14 +35,14 @@ view: ipo {
   measure: sum_ipos {
     description: "Total valuation amount"
     type: sum
-    sql: ${valuation_amount} ;;
+    sql: ${IPO_valuation_amount} ;;
     value_format_name: usd
   }
 
   measure: average_ipos {
     description: "Average valuation amount"
     type: average
-    sql: ${valuation_amount} ;;
+    sql: ${IPO_valuation_amount} ;;
     value_format_name: usd
   }
 }
