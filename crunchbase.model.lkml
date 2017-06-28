@@ -58,7 +58,7 @@ explore: companies {
 
   join: competing_company_info{
     from: companies
-    view_label: "Acquired Companies"
+    view_label: "Competitors"
     type: left_outer
     relationship: one_to_one
     sql_on: ${competitions.competitor_permalink} =  ${competing_company_info.permalink};;
