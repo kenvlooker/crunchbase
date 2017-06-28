@@ -80,19 +80,19 @@ view: companies {
     sql: ${TABLE}.description ;;
   }
 
-  dimension_group: record_created_at {
-    description: "Date and time company record created"
-    type: time
-    timeframes: [date, week, month, year]
-    sql: ${TABLE}.created_at ;;
-  }
+#  dimension_group: record_created_at {
+#    description: "Date and time company record created"
+#    type: time
+#    timeframes: [date, week, month, year]
+#    sql: ${TABLE}.created_at ;;
+#  }
 
-  dimension_group: record_updated_at {
-    description: "Date an time company record was last updated"
-    type: time
-    timeframes: [date, week, month, year]
-    sql: ${TABLE}.updated_at ;;
-  }
+#  dimension_group: record_updated_at {
+#    description: "Date an time company record was last updated"
+#    type: time
+#    timeframes: [date, week, month, year]
+#    sql: ${TABLE}.updated_at ;;
+#  }
 
 #  dimension: full_record {
 #    description: " "
