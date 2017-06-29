@@ -99,11 +99,12 @@ view: companies {
 #    type: number
 #    sql: ${TABLE}.full_record ;;
 #  }
+
   measure: companies_count {
    description: "Number of companies"
    type: count
    # drill_fields: []
- }
+  }
   measure: average_employees {
     type:  average
     description: "Average # of employees"

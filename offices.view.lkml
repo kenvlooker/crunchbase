@@ -16,6 +16,7 @@ view: offices {
 
   dimension: state_code {
     description: "State"
+    map_layer_name: us_states
     type: string
     sql: ${TABLE}.state_code ;;
   }
