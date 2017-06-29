@@ -98,19 +98,18 @@ explore: companies {
     relationship: one_to_one
     sql_on: ${acquired.acquired_by_permalink} =  ${acquiring_company_info.permalink};;
   }
-    join: employment {
-    view_label: "Employees"
+    join: jobs {
+    from: employment
     type: left_outer
     relationship: one_to_many
-    sql_on: ${companies.permalink} = ${employment.company_permalink} ;;
+    sql_on: ${companies.permalink} = ${jobs.company_permalink} ;;
   }
 
-  join: employed_people {
+  join: people {
     from: people
-    view_label: "Employees"
     type: left_outer
     relationship: many_to_one
-    sql_on: ${employment.permalink} = ${employed_people.permalink} ;;
+    sql_on: ${jobs.permalink} = ${people.permalink} ;;
   }
 
 }

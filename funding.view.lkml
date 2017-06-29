@@ -59,7 +59,7 @@ view: funding {
   }
 
   measure: sum_funding {
-    description: "Total funding"
+    description: "Total funding amount"
     type: sum
     sql: ${raised_amount} ;;
     value_format_name: decimal_2
