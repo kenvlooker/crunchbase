@@ -21,8 +21,8 @@ view: ipo {
     value_format_name: usd
   }
 
-  dimension_group: IPO {
-    label: "IPO Date"
+  dimension_group: ipo_date {
+    label: "IPO"
     description: "Date of IPO"
     type: time
     timeframes: [date, week, month, year]
