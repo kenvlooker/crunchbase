@@ -117,10 +117,11 @@ explore: companies {
 explore: funding {
   label: "Funding and Investments"
 
-  join: companies {
+  join: funded_companies {
+    from: companies
     type: left_outer
     relationship: many_to_one
-    sql_on: ${funding.permalink} = ${companies.permalink} ;;
+    sql_on: ${funding.permalink} = ${funded_companies.permalink} ;;
   }
 
   join: investments {
@@ -131,6 +132,7 @@ explore: funding {
 
   join: investing_people {
     from: people
+    view_label: "Investors: People"
     type: left_outer
     relationship: one_to_one
     sql_on: ${investments.investor_permalink} = ${investing_people.permalink} AND ${investments.is_company} = 0  ;;
@@ -138,6 +140,7 @@ explore: funding {
 
   join: investing_companies {
     from: companies
+    view_label: "Investors: Companies"
     type: left_outer
     relationship: one_to_one
     sql_on: ${investments.investor_permalink} = ${investing_companies.permalink} AND ${investments.is_company} = 1  ;;
@@ -145,19 +148,20 @@ explore: funding {
 
 }
 
-explore: employment {
+explore: jobs {
+  from: employment
   label: "Employment Records"
 
   join: people {
     type: left_outer
     relationship: many_to_one
-    sql_on: ${employment.permalink} = ${people.permalink} ;;
+    sql_on: ${jobs.permalink} = ${people.permalink} ;;
   }
 
   join: companies {
     type: left_outer
     relationship: many_to_one
-    sql_on: ${employment.company_permalink} = ${companies.permalink} ;;
+    sql_on: ${jobs.company_permalink} = ${companies.permalink} ;;
   }
 
 }

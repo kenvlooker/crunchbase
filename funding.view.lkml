@@ -47,7 +47,7 @@ view: funding {
   }
 
   measure: funding_count {
-    description: "Number of fundings"
+    description: "Number of funding rounds"
     type: count
     # drill_fields: []
   }
@@ -58,7 +58,7 @@ view: funding {
     value_format_name: decimal_2
   }
 
-  measure: sum_funding {
+  measure: total_funding {
     description: "Total funding amount"
     type: sum
     sql: ${raised_amount} ;;

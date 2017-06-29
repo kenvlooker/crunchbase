@@ -105,7 +105,7 @@ view: companies {
    type: count
    # drill_fields: []
   }
-  measure: average_employees {
+  measure: average_number_employees {
     type:  average
     description: "Average # of employees"
     sql: ${number_of_employees} ;;
