@@ -37,6 +37,7 @@ explore: companies {
  }
 
   join: investing_people {
+    view_label: "Investors: People"
     from: people
     type: left_outer
     relationship: one_to_one
@@ -44,6 +45,7 @@ explore: companies {
   }
 
   join: investing_companies {
+    view_label: "Investors: Companies"
     from: companies
     type: left_outer
     relationship: one_to_one
