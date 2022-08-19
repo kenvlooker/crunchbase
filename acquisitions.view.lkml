@@ -1,5 +1,7 @@
 view: acquisitions {
 
+# adding comment to test github integration
+
   dimension: acquired_permalink {
     hidden: yes
     primary_key: yes
